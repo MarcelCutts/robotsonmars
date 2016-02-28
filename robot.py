@@ -2,6 +2,7 @@ class Robot(object):
     """
     Contains the spatial state of the robot as it bravely around mars,
     as well as methods to update those states.
+    Fun Rover Fact: Curiousity carries 12 million people's names in a chip on its 'back'.
     """
     def __init__(self, initial_x, initial_y, initial_orientation, movement_instructions):
         self.current_x = initial_x
@@ -35,7 +36,7 @@ class Robot(object):
         and if you 'overflow' on either side, you simply wrap round, e.g.
         right from W would return to N
         :param direction - The direction, 'L' or 'R', we'd like to turn
-        :returns: Updated orientation
+        :return: Updated orientation
         """
         orientations = ('N', 'E', 'S', 'W')
         current_orientation_index = orientations.index(self.current_orientation)
