@@ -15,7 +15,7 @@ class InitialCoordinateTest(unittest.TestCase):
 
     def test_correct_ranges_produce_correct_result(self):
         result = ingest.extract_coordinates("0 10")
-        self.assertEqual(result, {'maximum_x': 0, 'maximum_y': 10})
+        self.assertEqual(result, {'max_x': 0, 'max_y': 10})
 
 
 class RobotInstructionsTest(unittest.TestCase):
