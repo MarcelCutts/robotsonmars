@@ -1,7 +1,6 @@
 import unittest
 from robot import Robot
 
-
 class TestMoving(unittest.TestCase):
     def test_move_forward_north(self):
         north_bot = Robot(5, 5, 'N', 'F')

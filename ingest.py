@@ -43,8 +43,8 @@ def extract_coordinates(coordinates_line):
         sys.exit('Coordinates have a range of 0 to 50, '
                  'please double check your instructions and try again!')
 
-    return {'maximum_x': coordinates[0],
-            'maximum_y': coordinates[1]}
+    return {'max_x': coordinates[0],
+            'max_y': coordinates[1]}
 
 
 def extract_robots_instructions(instructions_lines):
@@ -54,12 +54,12 @@ def extract_robots_instructions(instructions_lines):
     """
     robots_instruction_lines = [
         (instructions_lines[line_number], instructions_lines[line_number+1])
-        for line_number in
-        range(0, len(instructions_lines), 3)
+        for line_number
+        in range(0, len(instructions_lines), 3)
     ]
 
     # Ensure no movement instruction set exceeds 100 moves
-    if any(len(ri[1]) > 100 for ri in robots_instruction_lines):
+    if any(len(ri[1]) >= 100 for ri in robots_instruction_lines):
         sys.exit('Unfortunately you cannot have more than 100 moves per robot! '
                  'Please upgrade to Mars Robot Pro for unlimited robot moves.')
 

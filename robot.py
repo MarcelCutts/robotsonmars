@@ -9,24 +9,32 @@ class Robot(object):
         self.current_y = initial_y
         self.current_orientation = initial_orientation
         self.movement_instructions = movement_instructions
+        self.is_lost = False
 
     def move_forward(self):
         """
         Moves our intrepid little rover forward 1 coordinate
         :return: Updated x, y coordinates of rover
         """
+        self.current_x, self.current_y = self.look_forward()
+
+    def look_forward(self):
+        """
+        Calculates the location in front of the robot.
+        Useful for not falling off the edges of things.
+        :return: The x, y of where location in front of the robot
+        """
         # In most languages, this would likely be a switch
         # statement, but python has chosen not to include one
         # due to its "one and only one way of doing something" philosophy
         if self.current_orientation == 'N':
-            self.current_y += 1
+            return self.current_x, self.current_y + 1
         if self.current_orientation == 'E':
-            self.current_x += 1
+            return self.current_x + 1, self.current_y
         if self.current_orientation == 'S':
-            self.current_y -= 1
+            return self.current_x, self.current_y - 1
         if self.current_orientation == 'W':
-            self.current_x -= 1
-        return self.current_x, self.current_y
+            return self.current_x - 1, self.current_y
 
     def turn(self, direction):
         """
