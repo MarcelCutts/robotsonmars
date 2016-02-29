@@ -11,13 +11,15 @@ Command your robots today!
 
 1. Ensure you have **Python 2.7** installed
 2. Pull or download this repo
-3. In the projects root, run `python main.py`
+3. In the project's root, run `python main.py`
 
 That's all there is, no need for any extra packages.
 
 ## I'm just here because I love tests
 
-Got you covered. Follow the _Getting up and running_ instructions. Then, in the project directory, run `python -m unittest discover`
+Got you covered. Follow the _Getting up and running_ instructions. Then, in the project directory, run
+
+```python -m unittest discover```
 
 ## Writing your own instructions
 
@@ -32,5 +34,5 @@ Each robot is processed sequentially, i.e., finishes executing the robot instruc
 ## Assumptions
 This is a very basic piece of code, so sometimes the analogy of robots on Mars breaks down. These include, but are not limited to
 + No collision detection between robots
-+ Validation exists, but is in no way bulletproof
++ Validation exists, but it is in no way bulletproof
 + The euclidean plane of Mars is positive only
