@@ -1,5 +1,6 @@
 # Robots on Mars
 [![Build Status](https://travis-ci.org/MarcelCutts/robotsonmars.svg?branch=master)](https://travis-ci.org/MarcelCutts/robotsonmars)
+[![Code Climate](https://codeclimate.com/github/MarcelCutts/robotsonmars/badges/gpa.svg)](https://codeclimate.com/github/MarcelCutts/robotsonmars)
 
 Instruct brave little robots to fearlessly adventure across Mars.
 
